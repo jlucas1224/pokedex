@@ -7,7 +7,7 @@ const Pokemon = (props) => {
     const firstType = pokemon.types.map(typeInfo => typeInfo.type.name)[0]
     const className = "pokemon-card "+firstType
     const onHeartClcik = () =>{
-        console.log(firstType)
+        updateFavoritePokemons(pokemon.name)
     }
     const heart = favoritePokemons.includes(pokemon.name)? "💖": "🖤"
     return(

@@ -112,7 +112,11 @@ nav {
 .water{
   background: url(./backgroundTypes/water.jpeg);
 }
-
+.electric{
+  background: url(./backgroundTypes/electric.jpg);
+  background-repeat: no-repeat;
+    background-size: cover
+}
 .pokemon-card {
   height: 100px;
   display: flex;
