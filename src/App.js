@@ -97,7 +97,10 @@ function App() {
           page={page}
           totalPages={totalPages}
           setPage={setPage}
-        />)}
+        />
+        
+        )}
+        <div className='padding'></div>
       </div>
     </FavoriteProvider>
   );

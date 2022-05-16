@@ -4,9 +4,11 @@
 }
 
 body{
-  background: black;
+  background: linear-gradient(to right, orange, rgb(249, 55, 12));
 }
-
+.padding{
+  padding: 20px;
+}
 nav {
   height: 100px;
   display: flex;
@@ -32,6 +34,7 @@ nav {
 }
 
 .searchbar input {
+  color: black;
   padding: 10px;
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
   border-radius: 3px;
@@ -118,12 +121,25 @@ nav {
     background-size: cover
 }
 .pokemon-card {
-  height: 100px;
+  margin: 0 10px;
+  height: 110px;
   display: flex;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 3px;
 }
-
+@keyframes card-hover{
+  100%{
+    
+    box-shadow: rgb(0 0 0 / 80%) 0px 40px 58px -16px,
+      rgb(0 0 0 / 72%) 0px 30px 22px -10px;
+    transform: scale(1.05);
+    border-radius: 10px;
+  }
+}
+.pokemon-card:hover{
+  
+  animation: card-hover 0.3s forwards;
+}
 .pokemon-image{
   width: 70px;
   height: 70px;
@@ -193,6 +209,47 @@ nav {
   text-align: center;
   font-size: 1.25em;
   padding: 25px;
+}
+.container-loading{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pokeball{
+  height: 250px;
+  width: 250px;
+  border: 13px solid #383b4f;
+  border-radius: 50%;
+  background-image: linear-gradient(#f51939 124px, white 125px);
+  position: relative;
+  animation: load 2s infinite;
+}
+@keyframes load{
+  50%{
+    transform: scale(0.7);
+  }
+}
+.pokeball:before{
+  position: absolute;
+  content: "";
+  height: 25px;
+  width: 250px;
+  background-color: #383b4f;
+  top: 112.5px;
+}
+.pokeball:after{
+  position: absolute;
+  content: "";
+  height: 90px;
+  width: 90px;
+  background-image: radial-gradient(
+    #ffffff 0px, #ffffff 10px,
+    #383b4f 10px, #383b4f 15px,
+    #ffffff 15px, #ffffff 32px,
+    #383b4f 32px);
+  border-radius: 50%;
+  top: 80px;
+  left: 80px;
 }
 
 .App {
