@@ -1,5 +1,6 @@
 import React from "react";
 import Pagination from "./Pagination";
+import PokeballLoading from "./PokeballLoading";
 import Pokemon from "./Pokemon";
 
 const Pokedex = (props) => {
@@ -26,10 +27,7 @@ const Pokedex = (props) => {
                 />
             </div>
             {loading ? (
-                <div class="container-loading">
-                <div class="pokeball"></div>
-               
-              </div>
+               <PokeballLoading></PokeballLoading>
             ) : (
                 <div className="pokedex-grid">
                     {pokemons && pokemons.map((pokemon, index) => {
